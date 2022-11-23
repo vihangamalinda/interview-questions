@@ -2,6 +2,7 @@ package com.vihanga.algo.linked.list;
 
 import com.vihanga.algo.linked.list.custom.CustomLinkedList;
 import com.vihanga.algo.linked.list.custom.Node;
+import com.vihanga.algo.linked.list.operators.Operator;
 
 public class TestCustomLinkedList {
 
@@ -20,5 +21,12 @@ public class TestCustomLinkedList {
         // fourth.next = null already.
 
         customLinkedList.displayContent();
+        Operator operator = new Operator();
+        operator.deleteBackHalfLinkedList(customLinkedList);
+        customLinkedList.displayContent();
+        System.out.println("Null list");
+      CustomLinkedList customLinkedList1=  new CustomLinkedList();
+        operator.deleteBackHalfLinkedList(customLinkedList1);
+        System.out.println("   ...    ");
     }
 }
