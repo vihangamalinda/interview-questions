@@ -1,5 +1,7 @@
 package com.vihanga.algo.hash.map;
 
+import com.vihanga.algo.hash.map.challenge.Operator;
+
 import java.util.HashMap;
 
 public class Algorithms {
@@ -17,10 +19,15 @@ public class Algorithms {
         System.out.println();
 
         Employee retrievedEmployee = employeeHashMap.get(132);
-       
+
         if(retrievedEmployee != null){
             System.out.println("Employee Retrieved: "+ retrievedEmployee);
         }
 
+        //challenge
+        Operator.displayElementFrequency(new int[]{1,25,32,67,88,1,33,44,55,25,67,33,25});
+
     }
+
+
 }
