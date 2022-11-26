@@ -1,5 +1,7 @@
 package com.vihanga.interview.prep.string;
 
+import java.util.Arrays;
+
 public class Operator {
 
     public static void main(String[] args) {
@@ -36,11 +38,16 @@ public class Operator {
     private static void findSentenceCount(String s){
         String[] sentence = s.trim().split("\\.");
         System.out.println("Sentences count: "+sentence.length);
+//        Arrays.stream(sentence).forEach(val-> System.out.println(val));
+
+        System.out.println("character count: "+s.length());
+
 
     }
     private static void findWordCount(String s){
        String[] words =  s.trim().split(" |-");
         System.out.println("Word count: "+words.length);
+        System.out.println(Arrays.asList(words));
 
     }
 
