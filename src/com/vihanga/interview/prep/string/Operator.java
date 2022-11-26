@@ -1,6 +1,7 @@
 package com.vihanga.interview.prep.string;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Operator {
 
@@ -9,15 +10,18 @@ public class Operator {
 //        System.out.println(output);
 //        stringMutation("ynmnimj mbgjkiuim");
 
-        String val= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has" +
-                " been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of " +
-                "type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the " +
-                "leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with " +
-                "the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing " +
-                "software like Aldus PageMaker including versions of Lorem Ipsum.";
-
-        findSentenceCount(val);
-        findWordCount(val);
+//        String val= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has" +
+//                " been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of " +
+//                "type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the " +
+//                "leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with " +
+//                "the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing " +
+//                "software like Aldus PageMaker including versions of Lorem Ipsum.";
+//
+//        findSentenceCount(val);
+//        findWordCount(val);
+//        palindrome  eg: civic,racecar
+        boolean result = palindromeChecker("racecar");
+        System.out.println(result);
     }
 
     public static String firstLetterCapital(String input) {
@@ -78,6 +82,25 @@ public class Operator {
         System.out.println("length: "+builder.length()+ " , value: "+builder.toString());
 
 
+
+
+    }
+
+    private static boolean palindromeChecker(String s){
+        //Base Case
+        if(s.length()==0){
+            return false;
+        }
+        String input = s.trim().toLowerCase();
+        String[] letters = input.split("");
+        System.out.println(Arrays.asList(letters));
+        for (int i=0;i< letters.length/2;i++){
+            System.out.println(i);
+            if( !letters[i].equals(letters[letters.length-1-i]) ){
+                return false;
+            }
+        }
+        return true;
 
 
     }
