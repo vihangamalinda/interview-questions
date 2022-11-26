@@ -5,7 +5,17 @@ public class Operator {
     public static void main(String[] args) {
 //        String output = firstLetterCapital("Hi, this is Vihanga malinda.");
 //        System.out.println(output);
-        stringMutation("ynmnimj mbgjkiuim");
+//        stringMutation("ynmnimj mbgjkiuim");
+
+        String val= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has" +
+                " been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of " +
+                "type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the " +
+                "leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with " +
+                "the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing " +
+                "software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+        findSentenceCount(val);
+        findWordCount(val);
     }
 
     public static String firstLetterCapital(String input) {
@@ -20,6 +30,18 @@ public class Operator {
             word.delete(0, word.length());
         }
         return sentence.toString().trim();
+    }
+
+
+    private static void findSentenceCount(String s){
+        String[] sentence = s.trim().split("\\.");
+        System.out.println("Sentences count: "+sentence.length);
+
+    }
+    private static void findWordCount(String s){
+       String[] words =  s.trim().split(" |-");
+        System.out.println("Word count: "+words.length);
+
     }
 
     public static void stringMutation(String s){
