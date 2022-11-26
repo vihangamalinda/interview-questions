@@ -8,8 +8,8 @@ public class Operator {
         HashMap<Integer,Integer> frequencyArr = new HashMap<>();
 
         for (int i=0; i< arr.length;i++){
-          Integer currentVal =  frequencyArr.get(arr[i]);
-            if(currentVal ==null){
+//          Integer currentVal =  frequencyArr.get(arr[i]);
+            if(!frequencyArr.containsKey(arr[i])){
                 frequencyArr.put(arr[i],1);
             }else {
                 frequencyArr.put(arr[i],frequencyArr.get(arr[i])+1);
