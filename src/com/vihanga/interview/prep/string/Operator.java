@@ -20,8 +20,13 @@ public class Operator {
 //        findSentenceCount(val);
 //        findWordCount(val);
 //        palindrome  eg: civic,racecar
-        boolean result = palindromeChecker("racecar");
-        System.out.println(result);
+//        boolean result = palindromeChecker("racecar");
+//        System.out.println(result);
+//
+        String sample = "Lorem Ipsum is simply dummy text of the printing and typesetting industry";
+        findVowelsConsonantCount(sample);
+        System.out.println();
+        findVowelsConsonantCount2(sample);
     }
 
     public static String firstLetterCapital(String input) {
@@ -101,7 +106,45 @@ public class Operator {
             }
         }
         return true;
+    }
 
+//    Assume there are no numerics only characters and spaces
+    private static void findVowelsConsonantCount(String s){
+        String input = s.trim().toLowerCase().replaceAll(" ","");
+       char[] charArray =input.toCharArray();
+       String[] vowel = new String[]{"a","e","i","o","u"};
+        int vowelCount =0;
+       for (String x:vowel){
+           for (char y: charArray){
+               if(x.charAt(0) == y){
+                   vowelCount ++;
+               }
+           }
+       }
+        System.out.println("Without removing middle spaces character length: "+s.trim().toLowerCase().length());
+        System.out.println("Total character amount: "+input.length());
+        System.out.println("Vowel character amount: "+vowelCount);
+        System.out.println("Consonant character amount: "+(input.length()-vowelCount));
+
+    }
+
+//    Assume there are no numerics only characters and spaces
+    private static void findVowelsConsonantCount2(String s){
+        String input = s.trim().toLowerCase().replaceAll(" ","");
+        char[] charArr = input.toCharArray();
+        String vowels = "aeiou";
+        int vowelCount = 0;
+
+        for (char x: charArr){
+            if(vowels.indexOf(x) != -1){
+                vowelCount++;
+            }
+        }
+
+        System.out.println("Without removing middle spaces character length: "+s.trim().toLowerCase().length());
+        System.out.println("Total character amount: "+input.length());
+        System.out.println("Vowel character amount: "+vowelCount);
+        System.out.println("Consonant character amount: "+(input.length()-vowelCount));
 
     }
 }
