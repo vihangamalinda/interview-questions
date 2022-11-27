@@ -108,7 +108,8 @@ public class Operator {
         return true;
     }
 
-//    Assume there are no numerics only characters and spaces
+//    Assume there are no numerics
+//    only characters and spaces
     private static void findVowelsConsonantCount(String s){
         String input = s.trim().toLowerCase().replaceAll(" ","");
        char[] charArray =input.toCharArray();
